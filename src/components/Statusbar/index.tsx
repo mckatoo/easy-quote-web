@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import bar_loading from '../../assets/bar-loading.svg';
 import { useUpdating } from "../../hooks/use-updating";
-import { getApiVersion, getAppVersion } from "../../services/system-status";
+import { getApiVersion, getAppVersion } from "../../services/system/status";
 import { ErrorWrapper, Fields, Wrapper } from "./styles";
 
 export const Statusbar = () => {

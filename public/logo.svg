@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 120.06969 111.30554"
+   version="1.1"
+   id="svg7"
+   sodipodi:docname="logo.svg"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   width="120.06969"
+   height="111.30553"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs7" />
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="4.87"
+     inkscape:cx="74.948665"
+     inkscape:cy="78.747433"
+     inkscape:window-width="1366"
+     inkscape:window-height="696"
+     inkscape:window-x="1360"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g1" />
+  <!-- Background circle -->
+  <!-- Main wrench icon -->
+  <!-- Text -->
+  <g
+     id="g7"
+     transform="translate(-40.016173,-62.512755)">
+    <rect
+       style="font-variation-settings:'opsz' 32;fill:#808080;stroke:#333333;stroke-width:2.97449"
+       id="rect3"
+       width="117.0952"
+       height="108.33105"
+       x="41.503418"
+       y="64"
+       ry="6.9149055" />
+    <g
+       id="g1"
+       transform="matrix(0.91224022,0,0,0.91224022,8.780456,10.370181)">
+      <g
+         transform="translate(100,100)"
+         id="g6">
+        <!-- Wrench body -->
+        <path
+           d="m -25,-30 v 20 l -10,10 10,10 v 20 q 0,5 5,5 h 40 q 5,0 5,-5 v -60 q 0,-5 -5,-5 h -40 q -5,0 -5,5 z"
+           fill="#2563eb"
+           stroke="#1e40af"
+           stroke-width="2"
+           id="path1" />
+        <!-- Wrench head opening -->
+        <rect
+           x="-30"
+           y="-15"
+           width="10"
+           height="10"
+           fill="#1e40af"
+           rx="1"
+           id="rect1" />
+        <!-- Document/paper overlay -->
+        <g
+           transform="translate(15,-25)"
+           id="g4">
+          <rect
+             x="0"
+             y="0"
+             width="35"
+             height="45"
+             fill="#ffffff"
+             stroke="#2563eb"
+             stroke-width="2"
+             rx="2"
+             id="rect2" />
+          <!-- Lines representing text -->
+          <line
+             x1="5"
+             y1="8"
+             x2="30"
+             y2="8"
+             stroke="#2563eb"
+             stroke-width="1.5"
+             stroke-linecap="round"
+             id="line2" />
+          <line
+             x1="5"
+             y1="15"
+             x2="30"
+             y2="15"
+             stroke="#2563eb"
+             stroke-width="1.5"
+             stroke-linecap="round"
+             id="line3" />
+          <line
+             x1="5"
+             y1="22"
+             x2="25"
+             y2="22"
+             stroke="#2563eb"
+             stroke-width="1.5"
+             stroke-linecap="round"
+             id="line4" />
+          <!-- Dollar sign -->
+          <text
+             x="17.5"
+             y="38"
+             font-family="Arial, sans-serif"
+             font-size="14px"
+             font-weight="bold"
+             fill="#10b981"
+             text-anchor="middle"
+             id="text4">$</text>
+        </g>
+        <!-- Gear accent -->
+        <g
+           transform="matrix(0.4,0,0,0.4,-35,25)"
+           id="g5">
+          <circle
+             cx="0"
+             cy="0"
+             r="12"
+             fill="#f59e0b"
+             stroke="#d97706"
+             stroke-width="2"
+             id="circle4" />
+          <circle
+             cx="0"
+             cy="0"
+             r="5"
+             fill="#ffffff"
+             id="circle5" />
+          <!-- Gear teeth -->
+          <path
+             d="m 0,-12 3,-3 H -3 Z M 12,0 15,3 V -3 Z M 0,12 -3,15 H 3 Z M -12,0 -15,-3 v 6 z"
+             fill="#f59e0b"
+             stroke="#d97706"
+             stroke-width="1"
+             id="path5" />
+        </g>
+      </g>
+      <text
+         x="100"
+         y="155"
+         font-family="Arial, sans-serif"
+         font-size="18px"
+         font-weight="bold"
+         fill="#1e293b"
+         text-anchor="middle"
+         id="text6"
+         style="fill:#ffffff">Orça Fácil</text>
+      <text
+         x="108.05447"
+         y="156.92905"
+         font-family="Arial, sans-serif"
+         font-size="10.7635px"
+         fill="#64748b"
+         text-anchor="middle"
+         id="text7"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.1868px;font-family:Arial, sans-serif;-inkscape-font-specification:'Arial, sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#e6e6e6;stroke-width:1.2482"
+         transform="scale(0.92553797,1.0804527)">Sistema de Orçamentos</text>
+    </g>
+  </g>
+</svg>

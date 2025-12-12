@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLogoVersion } from "../../hooks/use-logoVersion";
 import { useSettings } from "../../hooks/use-settings";
+import getLogoPath from "../../services/system/getLogoPath";
 import { Img } from "./styles";
 
 export const Logo = () => {
@@ -9,7 +10,7 @@ export const Logo = () => {
   const { settings } = useSettings()
 
   const load = async () => {
-    setLogoProdPath(await window.electron_ipc.get_logo_path())
+    setLogoProdPath(await getLogoPath())
   }
 
   useEffect(() => {
