@@ -4,6 +4,7 @@ import { Sidebar } from "../components/Sidebar";
 import { Statusbar } from "../components/Statusbar";
 import { useSettings } from "../hooks/use-settings";
 import { AppWrapper, Main, MainWrapper, SidebarWrapper } from "./styles";
+import getAllSettings from "../services/system/settings/getAllSettings";
 
 export const App = () => {
   const pageState = useState<JSX.Element>();
@@ -11,7 +12,7 @@ export const App = () => {
   const { setSettings } = useSettings()
 
   async function loadSettings() {
-    const settings = await window.electron_ipc.settings.get_all()
+    const settings = await getAllSettings()
     !!settings && setSettings(settings)
   }
 
