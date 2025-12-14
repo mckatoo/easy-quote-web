@@ -14,6 +14,8 @@ import { useSettings } from "../../hooks/use-settings";
 import { useUpdating } from "../../hooks/use-updating";
 import { getAddressByCEP } from "../../services/address/getAddressByCEP";
 import { AutoBackupWrapper, AutoUpdateInputs, AutoUpdateWrapper, BackupContainer, BackupListWrapper, BackupsPathAndQtd, CEPWrapper, CityWrapper, ColorButtonWrapper, ColorPicker, ColorPickerWrapper, CompanyWrapper, CompanyWrapperButtons, CompanyWrapperLine, LogoButtonWrapper, Main, PathBackup, PhonesButtonWrapper, QtdMaxStoredBackup, SaveAllSettingsButton, Title, UFWrapper, UpdateInterval, UpdateWrapper, Wrapper, WrapperBackupContainer } from "./styles";
+import checkAndInstallUpdate from "../../services/system/checkAndInstallUpdate";
+import backupGetBackupList from "../../services/system/backup/getBackupList";
 
 type Backup = {
   date: string
@@ -80,7 +82,7 @@ export const SettingsPage = () => {
   async function update() {
     setUpdating(true)
     try {
-      await window.electron_ipc.check_install_update()
+      await checkAndInstallUpdate()
     } catch (error) {
       setUpdating(false)
     }
@@ -88,7 +90,7 @@ export const SettingsPage = () => {
   }
   async function loadBackupList() {
     !!backupTimeoutID && clearTimeout(backupTimeoutID);
-    const backups = await window.electron_ipc.get_backup_list()
+    const backups = await backupGetBackupList()
     !!backups && setBackupList(backups);
     if (!!settings?.backup.interval)
       backupTimeoutID = setTimeout(loadBackupList, +settings.backup.interval * 60 * 1000);
