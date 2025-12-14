@@ -37,8 +37,7 @@ export const SettingsPage = () => {
     { label: '10 backups', value: "10" },
     { label: '20 backups', value: "20" }
   ]
-  // let backupTimeoutID: NodeJS.Timeout;
-  let backupTimeoutID: number | undefined;
+  let backupTimeoutID: NodeJS.Timeout;
 
   const [autoUpdate, setAutoUpdate] = useState(false);
   const [autoBackup, setAutoBackup] = useState(false);
