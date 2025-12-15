@@ -1,5 +1,5 @@
-// styles.ts
 import styled from 'styled-components';
+import colors from '../../colors';
 
 export const Container = styled.div`
   display: flex;
@@ -54,6 +54,7 @@ export const RightSide = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 10px;
   
   @media (max-width: 950px) {
     padding: 40px 30px;
@@ -67,7 +68,7 @@ export const RightSide = styled.div`
 export const Logo = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 `;
 
 export const LogoIcon = styled.div`
@@ -83,17 +84,17 @@ export const LogoText = styled.div`
 
 export const SystemTitle = styled.h2`
   font-size: 22px;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   font-weight: 600;
 `;
 
 export const FeaturesList = styled.ul`
   list-style-type: none;
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
 `;
 
 export const FeatureItem = styled.li`
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
   display: flex;
   align-items: center;
   font-size: 16px;
@@ -113,24 +114,51 @@ export const VersionInfo = styled.div`
 
 export const LoginTitle = styled.h1`
   font-size: 28px;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
   color: #2c3e50;
   font-weight: 700;
+  text-align: center;
 `;
 
 export const LoginSubtitle = styled.p`
   color: #7f8c8d;
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
   font-size: 16px;
 `;
 
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+`;
+
+export const GeneralError = styled.div`
+  color: ${colors.red500};
+  font-size: 14px;
+  max-height: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+`
+
+export const InputError = styled.div`
+  color: ${colors.red500};
+  font-size: 14px;
+  text-align: right;
+  position: relative;
+  top: -56px;
+  right: 4px;
+  height: 0;
+`
+
 export const FormGroup = styled.div`
-  margin-bottom: 25px;
+  /* margin-bottom: 25px; */
 `;
 
 export const FormLabel = styled.label`
   display: block;
-  margin-bottom: 8px;
+  /* margin-bottom: 8px; */
   color: #555;
   font-weight: 600;
 `;
@@ -162,18 +190,11 @@ export const StyledInput = styled.input<{ $hasError?: boolean }>`
   }
 `;
 
-export const ErrorMessage = styled.div`
-  color: #e74c3c;
-  font-size: 14px;
-  margin-top: 5px;
-  min-height: 20px;
-`;
-
 export const RememberForgot = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   font-size: 14px;
   
   @media (max-width: 500px) {
@@ -213,7 +234,7 @@ export const LoginButton = styled.button`
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s;
-  margin-bottom: 25px;
+  /* margin-bottom: 25px; */
   
   &:hover {
     background-color: #45a049;
@@ -227,7 +248,7 @@ export const LoginButton = styled.button`
 
 export const Divider = styled.div`
   text-align: center;
-  margin-bottom: 25px;
+  /* margin-bottom: 25px; */
   position: relative;
   color: #95a5a6;
   
@@ -252,7 +273,7 @@ export const SocialLogin = styled.div`
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   
   @media (max-width: 500px) {
     flex-wrap: wrap;
