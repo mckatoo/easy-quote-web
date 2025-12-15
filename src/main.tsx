@@ -8,21 +8,24 @@ import { UpdatingProvider } from './hooks/use-updating/provider'
 import { VehicleProvider } from './hooks/use-vehicle/provider'
 import './index.css'
 import { LogoVersionProvider } from './hooks/use-logoVersion/provider'
+import { AuthProvider } from './hooks/use-auth/provider'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <LogoVersionProvider>
-      <SettingsProvider>
-        <UpdatingProvider>
-          <BudgetProvider>
-            <VehicleProvider>
-              <ClientProvider>
-                <App />
-              </ClientProvider>
-            </VehicleProvider>
-          </BudgetProvider>
-        </UpdatingProvider>
-      </SettingsProvider>
-    </LogoVersionProvider>
+    <AuthProvider>
+      <LogoVersionProvider>
+        <SettingsProvider>
+          <UpdatingProvider>
+            <BudgetProvider>
+              <VehicleProvider>
+                <ClientProvider>
+                  <App />
+                </ClientProvider>
+              </VehicleProvider>
+            </BudgetProvider>
+          </UpdatingProvider>
+        </SettingsProvider>
+      </LogoVersionProvider>
+    </AuthProvider>
   </StrictMode>,
 )
