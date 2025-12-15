@@ -20,7 +20,7 @@ export default () => {
     password: '',
     rememberMe: false
   });
-  
+
   const [errors, setErrors] = useState<LoginErrors>({});
   const [isLoading, setIsLoading] = useState(false);
 
@@ -30,7 +30,7 @@ export default () => {
       ...formData,
       [name]: type === 'checkbox' ? checked : value
     });
-    
+
     if (errors[name as keyof LoginErrors]) {
       setErrors({
         ...errors,
@@ -41,32 +41,32 @@ export default () => {
 
   const validateForm = (): boolean => {
     const newErrors: LoginErrors = {};
-    
+
     if (!formData.username.trim()) {
       newErrors.username = 'Usuário é obrigatório';
     }
-    
+
     if (!formData.password) {
       newErrors.password = 'Senha é obrigatória';
     }
-    
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
-    
+
     setIsLoading(true);
-    
+
     try {
       // Simulação de chamada à API
       await new Promise(resolve => setTimeout(resolve, 1500));
-      
+
       // Validação simulada (em um sistema real, isso seria feito no backend)
       if (formData.username === 'admin' && formData.password === '1234') {
         alert('Login realizado com sucesso! Redirecionando para o sistema...');
@@ -101,7 +101,6 @@ export default () => {
   return (
     <S.Container>
       <S.LoginContainer>
-        {/* Painel esquerdo com informações do sistema */}
         <S.LeftSide>
           <S.Logo>
             <S.LogoIcon>
@@ -109,9 +108,9 @@ export default () => {
             </S.LogoIcon>
             <S.LogoText>Orçamentos</S.LogoText>
           </S.Logo>
-          
+
           <S.SystemTitle>Sistema de Gestão de Orçamentos</S.SystemTitle>
-          
+
           <S.FeaturesList>
             <S.FeatureItem>
               <S.FeatureIcon><FaCheckCircle /></S.FeatureIcon>
@@ -134,23 +133,23 @@ export default () => {
               Controle financeiro integrado
             </S.FeatureItem>
           </S.FeaturesList>
-          
+
           <S.VersionInfo>
             <p>Versão da API: 0.1.0 | Versão do software: 0.1.5-1</p>
           </S.VersionInfo>
         </S.LeftSide>
-        
+
         <S.RightSide>
           <S.LoginTitle>Acessar Sistema</S.LoginTitle>
           <S.LoginSubtitle>Entre com suas credenciais para acessar o sistema</S.LoginSubtitle>
-          
-          <form onSubmit={handleSubmit}>
+
+          <S.Form onSubmit={handleSubmit}>
             {errors.general && (
-              <S.ErrorMessage style={{ textAlign: 'center', marginBottom: '15px' }}>
+              <S.GeneralError>
                 {errors.general}
-              </S.ErrorMessage>
+              </S.GeneralError>
             )}
-            
+
             <S.FormGroup>
               <S.FormLabel htmlFor="username">Usuário</S.FormLabel>
               <S.InputWithIcon>
@@ -168,9 +167,10 @@ export default () => {
                   disabled={isLoading}
                 />
               </S.InputWithIcon>
-              <S.ErrorMessage>{errors.username}</S.ErrorMessage>
+
+              <S.InputError>{errors.username}</S.InputError>
             </S.FormGroup>
-            
+
             <S.FormGroup>
               <S.FormLabel htmlFor="password">Senha</S.FormLabel>
               <S.InputWithIcon>
@@ -188,9 +188,9 @@ export default () => {
                   disabled={isLoading}
                 />
               </S.InputWithIcon>
-              <S.ErrorMessage>{errors.password}</S.ErrorMessage>
+              <S.InputError>{errors.password}</S.InputError>
             </S.FormGroup>
-            
+
             <S.RememberForgot>
               <S.Remember>
                 <input
@@ -207,37 +207,37 @@ export default () => {
                 Esqueceu a senha?
               </S.ForgotPassword>
             </S.RememberForgot>
-            
+
             <S.LoginButton type="submit" disabled={isLoading}>
               {isLoading ? 'Entrando...' : 'Entrar no Sistema'}
             </S.LoginButton>
-          </form>
-          
+          </S.Form>
+
           <S.Divider>
             <span>Ou acesse com</span>
           </S.Divider>
-          
+
           <S.SocialLogin>
-            <S.SocialIcon 
-              platform="facebook" 
+            <S.SocialIcon
+              platform="facebook"
               onClick={() => handleSocialLogin('Facebook')}
             >
               <FaFacebookF />
             </S.SocialIcon>
-            <S.SocialIcon 
-              platform="google" 
+            <S.SocialIcon
+              platform="google"
               onClick={() => handleSocialLogin('Google')}
             >
               <FaGoogle />
             </S.SocialIcon>
-            <S.SocialIcon 
-              platform="linkedin" 
+            <S.SocialIcon
+              platform="linkedin"
               onClick={() => handleSocialLogin('LinkedIn')}
             >
               <FaLinkedinIn />
             </S.SocialIcon>
           </S.SocialLogin>
-          
+
           <S.SignupLink>
             Não tem uma conta?{' '}
             <S.SignupLinkAnchor onClick={handleSignupRequest}>
